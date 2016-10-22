@@ -1,0 +1,29 @@
+<div class="currentPage">
+    {{ content | raw }}
+</div>
+
+{% if maxPages > 1 %}
+<nav aria-label="Page navigation" class="text-center">
+    <ul class="pagination">
+        {% if previousPage %}
+        <li>
+            <a href="{{ previousPage | app }}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        {% endif %}
+        {% for page in pageLinks %}
+        <li {% if page.pageNumber== currentPage %} class="active" {% endif %}>
+            <a href="{{ page.link | app }}">{{ page.pageNumber }}</a>
+        </li>
+        {% endfor %}
+        {% if nextPage %}
+        <li>
+            <a href="{{ nextPage | app }}" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
