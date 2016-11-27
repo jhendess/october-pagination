@@ -15,7 +15,7 @@ class Plugin extends PluginBase {
     public function pluginDetails() {
         return [
             'name' => 'Pagination',
-            'description' => 'No description provided yet...',
+            'description' => 'Provides automatic pagination based on a given separator.',
             'author' => 'Jakob Hendeß',
             'homepage' => 'https://github.com/jhendess/october-pagination',
             'icon' => 'icon-leaf'

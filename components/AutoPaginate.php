@@ -11,6 +11,16 @@ class AutoPaginate extends ComponentBase {
      */
     public function componentDetails() {
         return [
+            "name" => "Auto Paginate",
+            "description" => "Provide automatic pagination based on a separator"
+        ];
+    }
+
+    /**
+     * Returns information about this component, including name and description.
+     */
+    public function defineProperties() {
+        return [
             'separator' => [
                 'title' => 'Separator',
                 'description' => 'The separator which will be used for determining a pagebreak',
